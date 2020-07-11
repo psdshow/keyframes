@@ -1,0 +1,18 @@
+ffmpeg -i ./car.mp4 -filter_complex "color=black:1706x960[bg];[bg][0:v]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:shortest=1[overlay_out];[overlay_out]crop_dynamic=360:540:json_file=out_frames_example2.json" -pix_fmt yuv420p -y ./h2v_car.mp4 
+
+
+
+ffmpeg -i ./car.mp4 -filter_complex "color=black:1706x960[bg];[bg][0:v]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:shortest=1" -pix_fmt yuv420p -y ./h2v_org_car.mp4 
+
+ffmpeg -i ./h2v_org_car.mp4 -filter_complex "[0:v]crop_dynamic=360:540:json_file=out_frames_example2.json" -pix_fmt yuv420p -y ./h2v_car_2.mp4 
+
+
+
+
+ffmpeg -i ./car.mp4 -filter_complex "color=black:4552x2560[bg];[bg][0:v]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:shortest=1[overlay_out];[overlay_out]crop_dynamic=360:540:json_file=out_frames_example2.json" -pix_fmt yuv420p -y ./h2v_car3.mp4 
+
+
+ffmpeg -i ./car.mp4 -filter_complex "color=black:4552x2560[bg];[bg][0:v]overlay=x=(main_w-overlay_w)/2:y=(main_h-overlay_h)/2:shortest=1" -pix_fmt yuv420p -y ./h2v_car_4552x2560.mp4 
+
+ffmpeg -i ./h2v_car_4552x2560.mp4 -filter_complex "[0:v]crop_dynamic=360:540:json_file=out_frames_example2.json" -pix_fmt yuv420p -y ./h2v_car_6.mp4 
+
