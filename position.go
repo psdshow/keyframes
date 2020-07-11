@@ -2,7 +2,7 @@ package keyframes
 
 //本文件主要是针对key postion位置关系实现
 import (
-	"github.com/lihp1603/utils"
+	"github.com/psdshow/utils"
 )
 
 type KeyPostion struct {

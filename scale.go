@@ -2,7 +2,7 @@ package keyframes
 
 //本文件主要是实现针对关键帧 key scale的处理
 import (
-	"github.com/lihp1603/utils"
+	"github.com/psdshow/utils"
 )
 
 type KeyScale struct {

@@ -2,8 +2,8 @@ package main
 
 import (
 	"flag"
-	"github.com/lihp1603/keyframes"
-	"github.com/lihp1603/utils"
+	"github.com/psdshow/keyframes"
+	"github.com/psdshow/utils"
 )
 
 func init() {
